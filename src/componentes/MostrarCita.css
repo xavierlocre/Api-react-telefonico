@@ -1,0 +1,20 @@
+
+
+
+.buttons{
+    margin-top: 10px;
+    margin-bottom: 12px;
+    margin-left: 20px;
+    width: 200px;
+    height: 53px;
+    border: solid 1px;
+    border-radius: 10px;
+    font-size: large;
+    background-color: rgb(199, 206, 214);
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
+}
+.buttons:hover{
+    background-color: rgb(151, 165, 185);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    color: rgb(52, 52, 53);
+}
