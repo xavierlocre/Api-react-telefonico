@@ -36,16 +36,11 @@ const MostrarCita = () => {
             <div>
                 <NavLink to={`/edit/${cita.id}`}><button className="buttons">Editar Cita</button></NavLink>
                 <button className="buttons" onClick={() => handleDelete(cita.id)}>Eliminar Cita</button>
-                
+
             </div>
         </>
     )
 }
-
-
-
-
-
 
 
 export default MostrarCita
