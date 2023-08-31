@@ -27,19 +27,23 @@ const MostrarCita = () => {
 
     return (
         <>
-            <div className="contenedor-cita" key={cita.id}>
-                <p> {cita.nameCita} </p>
-                <p> {cita.nameUser} </p>
-                <p> {cita.fecha} </p>
-                <p> {cita.hora} </p>
-            </div>
-            <div>
-                <NavLink to={`/edit/${cita.id}`}><button className="buttons">Editar Cita</button></NavLink>
-                <button className="buttons" onClick={() => handleDelete(cita.id)}>Eliminar Cita</button>
-
-            </div>
+            {cita.map(cita => (
+                            <div>
+                            <div className="contenedor-cita" key={cita.id}>
+                                <p> {cita.nameCita} </p>
+                                <p> {cita.nameUser} </p>
+                                <p> {cita.fecha} </p>
+                                <p> {cita.hora} </p>
+                            </div>
+                            <div>
+                                <NavLink to={`/edit/${cita.id}`}><button className="buttons">Editar Cita</button></NavLink>
+                                <button className="buttons" onClick={() => handleDelete(cita.id)}>Eliminar Cita</button>
+                            </div>
+                        </div>
+            ))}
         </>
     )
+
 }
 
 
