@@ -22,7 +22,7 @@ const MostrarCita = () => {
     const handleDelete = async (id) => {
         await axios.delete(`${url}/${id}`);
         setCita((prevCita) => prevCita.filter((cita) => cita.id !== id));
-        alert(`ATENCION! ELIMINANDO CITA NUMERO ${id}`);
+        alert(`ATENCION! ELIMINANDO CITA ID#${id}`);
     };
 
     return (
@@ -30,6 +30,7 @@ const MostrarCita = () => {
             {cita.map(cita => (
                 <div className="all-container">
                     <div className="contenedor-cita" key={cita.id}>
+                        <p> ID#{cita.id}</p>
                         <p> {cita.nameCita}</p>
                         <p> {cita.nameUser} </p>
                         <p> {cita.fecha} </p>
