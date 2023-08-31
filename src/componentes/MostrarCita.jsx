@@ -28,14 +28,14 @@ const MostrarCita = () => {
     return (
         <>
             {cita.map(cita => (
-                            <div>
+                            <div className="all-container">
                             <div className="contenedor-cita" key={cita.id}>
                                 <p> {cita.nameCita} </p>
                                 <p> {cita.nameUser} </p>
                                 <p> {cita.fecha} </p>
                                 <p> {cita.hora} </p>
                             </div>
-                            <div>
+                            <div className="container-buttones">
                                 <NavLink to={`/edit/${cita.id}`}><button className="buttons">Editar Cita</button></NavLink>
                                 <button className="buttons" onClick={() => handleDelete(cita.id)}>Eliminar Cita</button>
                             </div>
