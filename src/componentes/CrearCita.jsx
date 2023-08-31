@@ -19,7 +19,7 @@ const CrearCita = () => {
 
     return (
         <>
-            <div className="all-container">
+            <div className="all-container-create">
                 <div className="containet-create">
                     <h3>Crear nueva cita</h3>
                     <form onSubmit={store}>
