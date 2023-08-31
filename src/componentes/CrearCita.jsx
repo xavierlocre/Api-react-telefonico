@@ -40,8 +40,10 @@ const CrearCita = () => {
                             <input type="text" value={hora} onChange={(e) => setHora(e.target.value)} />
                         </div>
                         <button className="buttons">Añadir</button>
+
                     </form>
                 </div>
+                {/* <NavLink to="/"><button className="buttons">Cancelar</button></NavLink> */}
             </div>
         </>
     )
