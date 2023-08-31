@@ -11,17 +11,21 @@ const CrearCita = () => {
     const [hora, setHora] = useState('')
 
     const navigate = useNavigate()
+    const cancel = () => {
+        navigate("/");
+    };
+
     const store = async (e) => {
         e.preventDefault()
         await axios.post(url, { nameCita: nameCita, nameUser: nameUser, fecha: fecha, hora: hora })
         navigate("/")
-    }
+    };
 
     return (
         <>
             <div className="all-container-create">
                 <div className="containet-create">
-                    <h3>Crear nueva cita</h3>
+                    <h2>Crear nueva cita</h2>
                     <form onSubmit={store}>
                         <div>
                             <form>Nombre de cita</form>
@@ -40,12 +44,15 @@ const CrearCita = () => {
                             <input type="text" value={hora} onChange={(e) => setHora(e.target.value)} />
                         </div>
                         <button className="buttons">Añadir</button>
+                        <button className="buttons" onClick={cancel}>Cancelar</button>
+                        {/* <NavLink to="/"><button className="buttons">Cancelar</button></NavLink> */}
 
                     </form>
                 </div>
-                {/* <NavLink to="/"><button className="buttons">Cancelar</button></NavLink> */}
+                
             </div>
         </>
     )
 }
-export default CrearCita 
+
+export default CrearCita
