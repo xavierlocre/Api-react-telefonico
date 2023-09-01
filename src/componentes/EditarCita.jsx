@@ -8,8 +8,8 @@ const EditarCita = () => {
     const [nameCita, setNameCita] = useState('');
     const [nameUser, setNameUser] = useState('');
     const [fecha, setFecha] = useState('');
-    const [hora, setHora] = useState('') ;
-    const [cita, setCita] = useState(null);
+    const [hora, setHora] = useState('');
+    /* const [cita, setCita] = useState(null); */
     
     const navigate = useNavigate()
     const cancel = () => {
@@ -20,7 +20,7 @@ const EditarCita = () => {
 
     const update = async (e) => {
         e.preventDefault()
-        await axios.put(`${url}/${id}`, {nameCita: nameCita, nameUser: nameUser, fecha: fecha, hora: hora})
+        await axios.put(`${url}/${id}`, {nameCita: nameCita, nameUser: nameUser, fecha: fecha, hora: hora}) // cita: cita
         navigate("/");
     }
     useEffect(() => {
