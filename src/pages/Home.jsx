@@ -6,6 +6,7 @@ const Home = () => {
     return (
         <>
             <NavLink to = "/create"><button className="buttons">Crear Nueva Cita</button></NavLink>
+            <h2>Lista de citas:</h2>
             
             <div>
                 <MostrarCita />
