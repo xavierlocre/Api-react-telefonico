@@ -28,8 +28,8 @@ const MostrarCita = () => {
     return (
         <>
             {cita.map(cita => (
-                <div className="all-container">
-                    <div className="contenedor-cita" key={cita.id}>
+                <div key={cita.id} className="all-container">
+                    <div className="contenedor-cita" >
                         <p> ID#{cita.id}</p>
                         <p> {cita.nameCita}</p>
                         <p> {cita.nameUser} </p>
@@ -46,6 +46,5 @@ const MostrarCita = () => {
     )
 
 }
-
 
 export default MostrarCita
