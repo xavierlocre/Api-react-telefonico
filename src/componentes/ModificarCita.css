@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Courier New', Courier, monospace;
+  background-color: #0353A4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form {
+  background-color: #0353A4;
+  display:flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 420px;
+}
+
+form h2{
+  font-size:30px;
+  color:black;
+  margin-bottom: 35px;
+}
+
+input {
+  padding:17px;
+  border-radius:25px;
+  background-color:#B9d6f2;
+  border: 2px solid black;
+  margin-bottom: 30px;
+  outline:none;
+  color: blue;
+  font-size: 18px;
+  cursor: pointer;
+}
