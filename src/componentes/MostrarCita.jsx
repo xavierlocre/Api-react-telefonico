@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+
 import { NavLink } from "react-router-dom"
 import './MostrarCita.css'
 
@@ -28,8 +28,8 @@ const MostrarCita = () => {
     return (
         <>
             {cita.map(cita => (
-                <div className="all-container">
-                    <div className="contenedor-cita" key={cita.id}>
+                <div key={cita.id} className="all-container">
+                    <div className="contenedor-cita" >
                         <p> ID#{cita.id}</p>
                         <p> {cita.nameCita}</p>
                         <p> {cita.nameUser} </p>
