@@ -9,6 +9,7 @@ const EditarCita = () => {
     const [nameUser, setNameUser] = useState('');
     const [fecha, setFecha] = useState('');
     const [hora, setHora] = useState('');
+    const {id} = useParams();
     /* const [cita, setCita] = useState(null); */
     
     const navigate = useNavigate()
@@ -16,7 +17,7 @@ const EditarCita = () => {
         navigate("/");
     };
 
-    const {id} = useParams();
+    
 
     const update = async (e) => {
         e.preventDefault()
@@ -26,12 +27,14 @@ const EditarCita = () => {
     useEffect(() => {
         const getCitaById = async () => {
             const response = await axios.get(`${url}/${id}`);
-            const data = response.data;
-            setCita(data);
+            const data = response.data; 
+            console.log(data) 
+            /* setCita(data); */
             setNameCita(data.nameCita);
             setNameUser(data.nameUser);
             setFecha(data.fecha);
             setHora(data.hora);
+            
         }
 getCitaById()
     }, [id])
@@ -43,22 +46,22 @@ getCitaById()
                 <h3>Modificar cita ID {id}</h3>
                 <form onSubmit={update}>
                     <div>
-                        <form>Nonbre de cita</form>
+                        <label htmlFor="nameCita">Nombre de cita</label>
                         <input type="text" id="hover"
                         value={nameCita} onChange={(e) => setNameCita(e.target.value)}/>
                     </div>
                     <div>
-                        <form>Nonbre de usuario</form>
+                        <label htmlFor="nameUsario">Nombre de usuario</label>
                         <input type="text" id="hover"
                         value={nameUser} onChange={(e) => setNameUser(e.target.value)}/>
                     </div>
                     <div>
-                        <form>Fecha</form>
+                        <label htmlFor="fecha">Fecha</label>
                         <input type="text" id="hover"
                         value={fecha} onChange={(e) => setFecha(e.target.value)}/>
                     </div>
                     <div>
-                        <form>Hora</form>
+                        <label htmlFor="hora">Hora</label>
                         <input type="text" id="hover"
                         value={hora} onChange={(e) => setHora(e.target.value)}/>
                     </div>
