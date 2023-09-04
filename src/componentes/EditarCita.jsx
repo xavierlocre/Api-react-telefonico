@@ -46,22 +46,22 @@ getCitaById()
                 <h3>Modificar cita ID {id}</h3>
                 <form onSubmit={update}>
                     <div>
-                        <label htmlFor="nameCita">Nombre de cita</label>
+                        <label htmlFor="nameCita">Nombre de cita -----</label>
                         <input type="text" id="hover"
                         value={nameCita} onChange={(e) => setNameCita(e.target.value)}/>
                     </div>
                     <div>
-                        <label htmlFor="nameUsario">Nombre de usuario</label>
+                        <label htmlFor="nameUsario">Nombre de usuario -</label>
                         <input type="text" id="hover"
                         value={nameUser} onChange={(e) => setNameUser(e.target.value)}/>
                     </div>
                     <div>
-                        <label htmlFor="fecha">Fecha</label>
+                        <label htmlFor="fecha">Fecha ---------------</label>
                         <input type="text" id="hover"
                         value={fecha} onChange={(e) => setFecha(e.target.value)}/>
                     </div>
                     <div>
-                        <label htmlFor="hora">Hora</label>
+                        <label htmlFor="hora">Hora ----------------</label>
                         <input type="text" id="hover"
                         value={hora} onChange={(e) => setHora(e.target.value)}/>
                     </div>

@@ -51,11 +51,22 @@
     color: rgb(52, 52, 53);
 }
 
-.all-container-edit, .all-container-create{
+.all-container-create{
 
-    /* background-image: url(src/pics/background1.png); */
+    background-image: url(src/pics/background1.png); 
     width: 110%;
     height: 42vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 3px black;
+    border-radius: 15px;
+}
+.all-container-edit{
+
+    background-image: url(src/pics/background1.png); 
+    width: 110%;
+    height: 29vh;
     display: flex;
     flex-direction: column;
     align-items: center;
