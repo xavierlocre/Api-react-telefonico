@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
 import { NavLink } from "react-router-dom"
 import './MostrarCita.css'
 
